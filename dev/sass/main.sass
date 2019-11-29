@@ -1,0 +1,151 @@
+$sec-bcg-color: #343434 // secondary background color !!GREY
+$sec-txt-color: white // text color for secondary background color !!WHITE
+    
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Open Sans', sans-serif
+    display: grid
+    grid-template-rows: min-content auto min-content
+
+ul
+    list-style-type: none
+a
+    text-decoration: none
+    font-weight: 700
+
+.container, .section__heading, .section__content
+    width: 90%
+    margin: 0 auto
+
+.hdr
+    &__container
+        position: relative
+    &__nav
+        position: absolute
+        width: 100%
+        z-index: 999
+        top: 25px
+.nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-list
+        display: grid
+        grid-template-columns: repeat(4, max-content)
+        justify-content: space-between
+        align-items: center
+        flex-basis: 80%
+    &__link
+        text-transform: uppercase
+        color: white
+        font-weight: 700
+    .logo__link
+        font-weight: 700
+        font-size: 24px
+
+.cart
+    width: 24px
+    height: 24px
+    cursor: pointer
+    &-inner
+        display: none
+.main
+    color: white
+    &__first
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.30)), url(/img/bcg.jpg) center no-repeat
+        background-size: cover
+        height: 80vh
+        display: flex
+        min-height: 100vh
+        align-items: center
+        justify-content: center
+
+.first
+    &__heading-main
+        text-transform: uppercase
+        font-size: 48px
+        color: $sec-txt-color
+        margin: 7vh 0
+    &__heading-txt
+        width: 50%
+        margin: 0 auto
+        margin-bottom: 4vh
+    &__sub
+        position: relative
+        font-size: 30px
+        width: 50%
+        margin: 0 auto
+        text-transform: uppercase
+        display: block
+        font-weight: 700
+        &::after, &::before
+            content: ""
+            position: absolute
+            top: 50%
+            width: 150px
+            height: 4px
+            display: inline-block
+            border-bottom: 2px solid #fff
+        &::before
+            left: -170px
+        &::after
+            right: -170px
+    &__cta
+        width: 30%
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        text-transform: uppercase
+        flex-wrap: wrap
+        align-items: center
+
+.cta__btn
+    padding: 14.5px 30px
+    border: 1px solid white
+    border-radius: 6px
+    font-size: 18px
+    color: $sec-txt-color
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s
+    &:first-child
+        background-color: #e7931a
+        border-color: #e7931a  
+    &:nth-child(2)
+        margin-left: 20px
+
+.section
+    padding: 5vh 0
+    &__heading
+        text-align: center
+    .heading
+        &__main
+            text-transform: uppercase
+            text-align: center
+            color: $sec-bcg-color
+        &__sub
+            color: white
+
+.ftr
+    border-top: 1px solid black
+    background-color: $sec-bcg-color
+    &__nav
+        padding: 2vh 0
+        margin: 0 auto
+    &__nav-list
+        grid-template-columns: repeat(3, max-content)
+        justify-content: center
+    &__item:not(:first-child)
+        margin-left: 8px
+    &__siteby, &__copywrite
+        text-align: center
+
+
+// medias
+
+@media screen and (max-width: 768px)
+    .nav-list
+        display: none
+    
