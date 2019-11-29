@@ -1,5 +1,6 @@
 $sec-bcg-color: #343434 // secondary background color !!GREY
 $sec-txt-color: white // text color for secondary background color !!WHITE
+$orange: #e7931a
     
 *
     padding: 0
@@ -54,9 +55,8 @@ a
     &-inner
         display: none
 .main
-    color: white
     &__first
-        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.30)), url(/img/bcg.jpg) center no-repeat
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.30)), url(../img/bcg.jpg) center no-repeat
         background-size: cover
         height: 80vh
         display: flex
@@ -74,6 +74,8 @@ a
         width: 50%
         margin: 0 auto
         margin-bottom: 4vh
+        font-size: 20px
+        color: white
     &__sub
         position: relative
         font-size: 30px
@@ -95,7 +97,6 @@ a
         &::after
             right: -170px
     &__cta
-        width: 30%
         margin: 0 auto
         display: flex
         justify-content: center
@@ -111,20 +112,32 @@ a
     color: $sec-txt-color
     transition: background-color 0.3s, color 0.3s, border-color 0.3s
     &:first-child
-        background-color: #e7931a
-        border-color: #e7931a  
+        background-color: $orange
+        border-color: $orange
+        &:hover
+            background-color: #343434
+            border-color: #343434
     &:nth-child(2)
         margin-left: 20px
 
 .section
     padding: 5vh 0
+    background-color: #f6f6f6
     &__heading
         text-align: center
     .heading
         &__main
             text-transform: uppercase
             text-align: center
-            color: $sec-bcg-color
+            color: #000
+            font-size: 36px
+            &::after
+                content: ""
+                display: block
+                background-color: $orange
+                width: 275px
+                height: 4px
+                margin: 9px auto 0
         &__sub
             color: white
 
