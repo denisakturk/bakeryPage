@@ -162,15 +162,6 @@ a {
   -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
-  .cta__btn:first-child {
-    background-color: #e7931a;
-    border-color: #e7931a; }
-    .cta__btn:first-child:hover {
-      background-color: #343434;
-      border-color: #343434;
-      -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
   .cta__btn:nth-child(2) {
     margin-left: 20px; }
     .cta__btn:nth-child(2):hover {
@@ -180,11 +171,23 @@ a {
       background-color: white;
       color: black; }
 
+.main__btn {
+  background-color: #e7931a;
+  border-color: #e7931a; }
+  .main__btn:hover {
+    background-color: #343434;
+    border-color: #343434;
+    -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
+
 .section {
   padding: 5vh 0;
   background-color: #f6f6f6; }
   .section__heading {
     text-align: center; }
+  .section__content {
+    margin-top: 25px; }
   .section .heading__main {
     text-transform: uppercase;
     text-align: center;
@@ -200,8 +203,34 @@ a {
   .section .heading__sub {
     color: white; }
 
+.contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.35)), to(rgba(0, 0, 0, 0.3))), url(../img/bcg2.jpg) center no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.3)), url(../img/bcg2.jpg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.3)), url(../img/bcg2.jpg) center no-repeat;
+  background-size: cover;
+  height: 80vh;
+  min-height: 100vh; }
+  .contact__heading-main {
+    color: white !important; }
+  .contact__content {
+    margin-top: 50px; }
+  .contact__form {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px; }
+  .contact .form__input {
+    padding: 15px;
+    border-radius: 6px; }
+  .contact .form__btn {
+    grid-column: 1 / 3;
+    margin: 0 auto; }
+  .contact .input-wide {
+    grid-column: 1 / 3; }
+
 .ftr {
-  border-top: 1px solid black;
   background-color: #343434; }
   .ftr__nav {
     padding: 2vh 0;

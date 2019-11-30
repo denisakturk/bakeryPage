@@ -117,19 +117,19 @@ a
     font-size: 18px
     color: $sec-txt-color
     transition: $animation
-    &:first-child
-        background-color: $orange
-        border-color: $orange
-        &:hover
-            background-color: #343434
-            border-color: #343434
-            transition: $animation
     &:nth-child(2)
         margin-left: 20px
         &:hover
             transition: $animation
             background-color: white
             color: black
+.main__btn
+        background-color: $orange
+        border-color: $orange
+        &:hover
+            background-color: #343434
+            border-color: #343434
+            transition: $animation
 
 
 .section
@@ -137,6 +137,8 @@ a
     background-color: #f6f6f6
     &__heading
         text-align: center
+    &__content
+        margin-top: 25px
     .heading
         &__main
             text-transform: uppercase
@@ -153,8 +155,32 @@ a
         &__sub
             color: white
 
+.contact
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.30)), url(../img/bcg2.jpg) center no-repeat
+    background-size: cover
+    height: 80vh
+    min-height: 100vh
+    &__heading-main
+        color: white !important
+    &__content
+        margin-top: 50px
+    &__form
+        width: 50%
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr 1fr
+        grid-gap: 10px
+    .form__input
+        padding: 15px
+        border-radius: 6px
+    .form__btn
+        grid-column:  1 / 3
+        margin: 0 auto
+    .input-wide
+        grid-column: 1 / 3
+
 .ftr
-    border-top: 1px solid black
     background-color: $sec-bcg-color
     &__nav
         padding: 2vh 0
