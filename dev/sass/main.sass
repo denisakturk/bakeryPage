@@ -1,6 +1,7 @@
 $sec-bcg-color: #343434 // secondary background color !!GREY
 $sec-txt-color: white // text color for secondary background color !!WHITE
 $orange: #e7931a
+$animation: background-color 0.3s, color 0.3s, border-color 0.3s
     
 *
     padding: 0
@@ -47,6 +48,11 @@ a
     .logo__link
         font-weight: 700
         font-size: 24px
+    &__item:not(:first-child):hover
+        background-color: $orange !important
+        border: 1px solid $orange
+        border-radius: 6px
+        transition: $animation
 
 .cart
     width: 24px
@@ -69,7 +75,7 @@ a
         text-transform: uppercase
         font-size: 48px
         color: $sec-txt-color
-        margin: 7vh 0
+        margin: 7vh 0 2vh 0
     &__heading-txt
         width: 50%
         margin: 0 auto
@@ -110,15 +116,21 @@ a
     border-radius: 6px
     font-size: 18px
     color: $sec-txt-color
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s
+    transition: $animation
     &:first-child
         background-color: $orange
         border-color: $orange
         &:hover
             background-color: #343434
             border-color: #343434
+            transition: $animation
     &:nth-child(2)
         margin-left: 20px
+        &:hover
+            transition: $animation
+            background-color: white
+            color: black
+
 
 .section
     padding: 5vh 0

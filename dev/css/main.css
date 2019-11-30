@@ -65,6 +65,13 @@ a {
   .nav .logo__link {
     font-weight: 700;
     font-size: 24px; }
+  .nav__item:not(:first-child):hover {
+    background-color: #e7931a !important;
+    border: 1px solid #e7931a;
+    border-radius: 6px;
+    -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
 
 .cart {
   width: 24px;
@@ -97,7 +104,7 @@ a {
   text-transform: uppercase;
   font-size: 48px;
   color: white;
-  margin: 7vh 0; }
+  margin: 7vh 0 2vh 0; }
 
 .first__heading-txt {
   width: 50%;
@@ -160,9 +167,18 @@ a {
     border-color: #e7931a; }
     .cta__btn:first-child:hover {
       background-color: #343434;
-      border-color: #343434; }
+      border-color: #343434;
+      -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
   .cta__btn:nth-child(2) {
     margin-left: 20px; }
+    .cta__btn:nth-child(2):hover {
+      -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      background-color: white;
+      color: black; }
 
 .section {
   padding: 5vh 0;
