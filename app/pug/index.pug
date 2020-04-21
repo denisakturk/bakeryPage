@@ -1,0 +1,149 @@
+doctype
+html
+  head
+    meta( name='viewport', content='width=device-width, initial-scale=1' )
+    title Vitol's Bakery
+    script( scr="https://use.fontawesome.com/8c002c973e.js")
+    link(rel="stylesheet", href="./css/main.css")
+  body
+    section.section.hero-section
+      .topbar
+        .container
+          .topbar__inner
+            nav.topbar__nav.nav
+              .toggle-btn
+                .line
+                .line
+                .line
+              ul.nav__menu
+                li
+                  a.nav__link(href="#") Our production
+                li
+                  a.nav__link(href="#") About us
+                li
+                  a.nav__link(href="#") Payment and Delivery
+                li
+                  a.nav__link(href="#") Contact us 
+                li
+                  a.nav__link(href="#") Cart
+            span.topbar__logo-link.logo-link(href="#") Vitol's Bakery
+            img.topbar__cart(src="./img/shopping-cart.svg")
+      .hero-content
+        .container
+          h1.hero-title
+            span.hero-sub Home &amp; hand made bread
+            | Vitol's Bakery
+          p.hero__lead.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque officiis voluptatibus illum quibusdam saepe, eius aut sed vitae, eveniet nemo doloribus tempora dolorem corporis cum.
+          .hero__cta.cta
+            a.hero__btn.cta__btn(href="#") Have a look
+            a.hero__link.cta__link(href="#") About us
+    section.section.products-section
+      .container
+        .section__content
+          .section-icon
+            img(src="./img/bread2.svg", alt="")
+          h2.section-title.products__title Our Products
+          ul.products-select
+            li
+              a.products-select__link(href="#") На закваске
+            li
+              a.products-select__link(href="#") Дрожжевой
+            li
+              a.products-select__link(href="#") Smth else
+            li
+              a.products-select__link(href="#") Smth else
+            li
+              a.products-select__link(href="#") Smth else
+          .products-grid
+            article.products-grid-item
+              img(src="./img/bread-photo.png", alt="")
+              .products-grid-item__content
+                h3 Пшеничный
+                  span С кунжутом, 400гр.
+                span.products-grid-item__price 440 rubles
+            article.products-grid-item
+              img(src="./img/bread-photo.png", alt="")
+              .products-grid-item__content
+                h3 Пшеничный
+                  span С кунжутом, 400гр.
+                span.products-grid-item__price 440 rubles
+            article.products-grid-item
+              img(src="./img/bread-photo.png", alt="")
+              .products-grid-item__content
+                h3 Пшеничный
+                  span С кунжутом, 400гр.
+                span.products-grid-item__price 440 rubles
+            article.products-grid-item
+              img(src="./img/bread-photo.png", alt="")
+              .products-grid-item__content
+                h3 Пшеничный
+                  span С кунжутом, 400гр.
+                span.products-grid-item__price 440 rubles
+            article.products-grid-item
+              img(src="./img/bread-photo.png", alt="")
+              .products-grid-item__content
+                h3 Пшеничный
+                  span С кунжутом, 400гр.
+                span.products-grid-item__price 440 rubles
+            article.products-grid-item
+              img(src="./img/bread-photo.png", alt="")
+              .products-grid-item__content
+                h3 Пшеничный
+                  span С кунжутом, 400гр.
+                span.products-grid-item__price 440 rubles
+          a.cta__btn See more
+    section.section.about__section
+      .container
+        .about__content.section__content
+          figure.about__photo
+            img(src="", alt="")
+          .about__desc
+            .section-icon
+              img(src="./img/bread2.svg", alt="")
+            h2.section-title.about__title About us
+            p.lead.about__lead Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum veritatis sed consequuntur debitis ab quia ad quam ducimus earum quasi, iste eos architecto nisi explicabo voluptate dicta eligendi ut incidunt. Iste corporis odit reprehenderit, architecto quos quas optio consectetur sed nemo nihil delectus voluptatem similique, commodi, facere nam. Vitae, quisquam.
+    section.section.promo__section
+      .container
+        .promo__content.section__content
+          .section-icon
+            img(src="./img/bread2.svg", alt="")
+          h2.section-title.promo__title Promo
+          article.products-grid-item
+            img(src="./img/bread-photo.png", alt="")
+            .products-grid-item__content
+              h3 Пшеничный
+                span С кунжутом, 400гр.
+              span.products-grid-item__price 440 rubles
+    section.section.contact__section
+      .container
+        .contact__content.section__content
+          .section-icon
+            img(src="./img/bread2.svg", alt="")
+          h2.section-title.contact__title Contact us
+          p.contact__lead.lead Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium vitae fugiat tempore at minima, nisi magnam totam sint dolorem reiciendis qui a dignissimos ut nobis.
+          .contact-types
+            .contact-socials
+              a.contact-socials__item(href="#")
+                img(src="", alt="Instagram")
+              a.contact-socials__item(href="#")
+                img(src="", alt="Facebook")
+              a.contact-socials__item(href="#")
+                img(src="", alt="VK")
+              a.contact-socials__item(href="#")
+                img(src="", alt="Whatsapp")
+            p OR
+            form.contact__form(action="")
+              input(type="text" placeholder="Your name")
+              textarea Your text
+              button.cta__btn Submit
+    footer.ftr
+      .container
+        .section-flex
+          p Copyright &copy; Vitol's Bakery 2020
+          div
+            p vitols@bakery.com
+            .ftr-socials
+              a.ftr-socials__item(href="")
+                img(src="", alt="Instagram")
+              a.ftr-socials__item(href="")
+                img(src="", alt="Facebook")
