@@ -1,0 +1,363 @@
+// VARIABLES
+$main-color: #ffaa16;
+$gray: #555;
+$title-color: #1e2528;
+// VARIABLES
+
+// RESET
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $title-color;
+}
+
+// RESET
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../fonts/DancingScript.eot');
+  src: local('☺'), url('../fonts/DancingScript.woff') format('woff'), url('../fonts/DancingScript.ttf') format('truetype'), url('../fonts/DancingScript.svg') format('svg');
+}
+
+:root {
+  font-size: calc(.875em + 0.5vw);
+}
+
+a {
+  color: $gray;
+  text-decoration: none;
+  // transition: ;
+  &:hover {
+    color: $main-color;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  max-width: 1110px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.topbar {
+  width: 100%;
+  padding: .5rem 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__cart {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &__logo-link {
+    font-family: 'Dancing Script';
+    font-size: 2rem;
+    color: $main-color;
+    text-decoration: none;
+  }
+}
+
+.toggle-btn {
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: $main-color;
+  border-radius: 5%;
+
+  & + & {
+    margin-top: 5px;
+  }
+}
+
+.nav {
+  &__menu {
+    display: none;
+
+    li {
+      text-align: center;
+    }
+  }
+}
+
+.section {
+  padding: 1rem 0;
+
+  &-title {
+    margin: 0 0 .5rem 0;
+    color: $title-color;
+    text-align: center;
+    text-transform: uppercase;
+    // color: #4e4e4e;
+  }
+
+  &-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.logo-link {
+}
+
+.hero {
+  &-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+    background-image: url('./img/');
+  }
+
+  &-content {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__inner {
+
+  }
+
+  &-title {
+    margin: 0 0 .5rem 0;
+    font-size: 2.3rem;
+  }
+
+  &-sub {
+    display: block;
+    margin-bottom: .5em;
+    font-size: 1rem;
+    text-transform: none;
+    color: $main-color;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  &-content {
+
+  }
+
+  &__lead {
+    font-size: .9rem;
+  }
+
+  &__btn {
+    margin-bottom: .8rem;
+    align-self: center;
+  }
+
+}
+
+.lead {
+  margin: 0 0 1rem 0;
+  color: $gray;
+  text-align: center;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  &__btn {
+    display: inline-block;
+    padding: .3rem 1.1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 20px;
+
+    &:hover {
+      color: $main-color;
+      text-decoration: none;
+      background-color: white;
+    }
+  }
+
+  &__link {
+    margin-bottom: .7rem;
+    font-weight: 700;
+    color: $main-color;
+  }
+}
+
+.products {
+  &-section {
+
+  }
+
+  &__title {
+
+  }
+
+  &-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 .7rem 0;
+
+    &__link {
+      
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+
+    &-item {
+      max-width: 330px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid #e3e6ea;
+      border-radius: 6px;
+      transition: all 300ms ease-in-out;
+
+      &__content {
+        padding: 0.3rem 1rem 0.8rem 1rem;
+      }
+
+      & h3 {
+        margin: 0 0 1rem 0;
+
+        & span {
+          display: block;
+          margin-top: -0.3em;
+          font-size: .7em;
+          color: $gray;
+        }
+      }
+
+      &__price {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $main-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.about {
+  &__section {
+
+  }
+  &__photo {
+
+  }
+  &__desc {
+
+  }
+  &__title {
+
+  }
+  &__lead {
+
+  }
+}
+
+
+.promo {
+
+  &__section {
+
+  }
+
+  &__title {
+
+  }
+
+  &-item {
+    &__image {
+
+    }
+    &__lead {
+
+    }
+    &__btn {
+
+    }
+  }
+}
+
+.contact {
+  &__section {
+
+  }
+  &__title {
+
+  }
+  &-types {
+
+  }
+  &-socials {
+    &__item {
+
+    }
+  }
+  &__form{
+
+  }
+}
+
+.ftr {
+  &-socils {
+    &__item {
+
+    }
+  }
+}
